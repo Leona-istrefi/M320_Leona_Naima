@@ -1,56 +1,45 @@
+import java.util.Scanner;
+
 public class Main {
-    // Attributes
-    private int temperature;
-    private int min;
-    private int max;
-    private int increment;
-
-    // Constructor
-    public Main(int initialTemperature, int min, int max, int increment) {
-        this.temperature = initialTemperature;
-        this.min = min;
-        this.max = max;
-        this.increment = increment;
-    }
-
-    // Method to increase the temperature
-    public void increaseTemperature() {
-        if (temperature + increment <= max) {
-            temperature += increment;
-        } else {
-            temperature = max;
-        }
-        System.out.println("Temperature increased to: " + temperature);
-    }
-
-    // Method to decrease the temperature
-    public void decreaseTemperature() {
-        if (temperature - increment >= min) {
-            temperature -= increment;
-        } else {
-            temperature = min;
-        }
-        System.out.println("Temperature decreased to: " + temperature);
-    }
-
-    // Getter for temperature
-    public int getTemperature() {
-        return temperature;
-    }
-
     public static void main(String[] args) {
-        // Test class - Creating multiple heating objects
-        Main heating1 = new Main(20, 10, 30, 2);
-        Main heating2 = new Main(15, 5, 25, 3);
+        Scanner scanner = new Scanner(System.in);
+
+        // Get user inputs for heating system 1
+        System.out.println("Enter initial temperature for heating 1:");
+        int initialTemp1 = scanner.nextInt();
+        System.out.println("Enter minimum temperature for heating 1:");
+        int minTemp1 = scanner.nextInt();
+        System.out.println("Enter maximum temperature for heating 1:");
+        int maxTemp1 = scanner.nextInt();
+        System.out.println("Enter increment value for heating 1:");
+        int increment1 = scanner.nextInt();
+
+        // Create heating 1 object
+        TaskB heating1 = new TaskB(initialTemp1, minTemp1, maxTemp1, increment1);
+
+        // Get user inputs for heating system 2
+        System.out.println("Enter initial temperature for heating 2:");
+        int initialTemp2 = scanner.nextInt();
+        System.out.println("Enter minimum temperature for heating 2:");
+        int minTemp2 = scanner.nextInt();
+        System.out.println("Enter maximum temperature for heating 2:");
+        int maxTemp2 = scanner.nextInt();
+        System.out.println("Enter increment value for heating 2:");
+        int increment2 = scanner.nextInt();
+
+        // Create heating 2 object
+        TaskB heating2 = new TaskB(initialTemp2, minTemp2, maxTemp2, increment2);
 
         // Testing heating1
-        heating1.increaseTemperature(); // Should increase to 22
-        heating1.decreaseTemperature(); // Should decrease to 20
-        heating1.decreaseTemperature(); // Should decrease to 18
+        heating1.increaseTemperature();
+        heating1.decreaseTemperature();
+        heating1.decreaseTemperature();
 
         // Testing heating2
-        heating2.increaseTemperature(); // Should increase to 18
-        heating2.increaseTemperature(); // Should increase to 21
-        heating2.decreaseTemperature(); // Should decrease to 18
+        heating2.increaseTemperature();
+        heating2.increaseTemperature();
+        heating2.decreaseTemperature();
+
+        scanner.close();
     }
 }
