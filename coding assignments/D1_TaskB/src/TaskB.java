@@ -12,6 +12,9 @@ public class TaskB {
 
     // Constructor with specified initial temperature
     public TaskB(int initialTemperature, int min, int max, int increment) {
+        if (min > max) {
+            throw new IllegalArgumentException("Min cannot be greater than Max");
+        }
         this.temperature = initialTemperature;
         this.min = min;
         this.max = max;
@@ -44,35 +47,45 @@ public class TaskB {
     }
 
     public void setTemperature(int temperature) {
+        if (temperature < min || temperature > max) {
+            throw new IllegalArgumentException("Temperature must be within the range of min and max");
+        }
         this.temperature = temperature;
     }
 
     // Getter and setter for min
+    public int getMin() {
+        return min;
+    }
+
     public void setMin(int min) {
+        if (min > max) {
+            throw new IllegalArgumentException("Min cannot be greater than Max");
+        }
         this.min = min;
     }
-
-    public void getMin(int min) {
-        this.min = min;
-    }
-
 
     // Getter and setter for max
-    public void setMax(int max) {
-        this.max = max;
+    public int getMax() {
+        return max;
     }
 
-    public void getMax(int max) {
+    public void setMax(int max) {
+        if (max < min) {
+            throw new IllegalArgumentException("Max cannot be less than Min");
+        }
         this.max = max;
     }
 
     // Getter and setter for increment
-    public void setIncrement(int increment) {
-        this.increment = increment;
+    public int getIncrement() {
+        return increment;
     }
 
-    public void getIncrement(int increment) {
+    public void setIncrement(int increment) {
+        if (increment <= 0) {
+            throw new IllegalArgumentException("Increment must be greater than zero");
+        }
         this.increment = increment;
     }
 }
-
