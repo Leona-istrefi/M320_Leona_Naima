@@ -38,7 +38,7 @@ public class TaskB {
         System.out.println("Temperature decreased to: " + temperature);
     }
 
-    // Getter for temperature
+    // Getter and setter for temperature
     public int getTemperature() {
         return temperature;
     }
@@ -47,15 +47,31 @@ public class TaskB {
         this.temperature = temperature;
     }
 
+    // Getter and setter for min
     public void setMin(int min) {
         this.min = min;
     }
 
+    public void getMin(int min) {
+        this.min = min;
+    }
+
+
+    // Getter and setter for max
     public void setMax(int max) {
         this.max = max;
     }
 
+    public void getMax(int max) {
+        this.max = max;
+    }
+
+    // Getter and setter for increment
     public void setIncrement(int increment) {
+        this.increment = increment;
+    }
+
+    public void getIncrement(int increment) {
         this.increment = increment;
     }
 }
