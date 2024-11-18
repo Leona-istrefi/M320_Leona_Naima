@@ -42,5 +42,21 @@ public class TaskB {
     public int getTemperature() {
         return temperature;
     }
+
+    public void setTemperature(int temperature) {
+        this.temperature = temperature;
+    }
+
+    public void setMin(int min) {
+        this.min = min;
+    }
+
+    public void setMax(int max) {
+        this.max = max;
+    }
+
+    public void setIncrement(int increment) {
+        this.increment = increment;
+    }
 }
 
