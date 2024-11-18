@@ -49,7 +49,7 @@ public class TaskB {
         return temperature;
     }
 
-    // Setter for Temparature
+    // Setter for Temperature
     public void setTemperature(int temperature) {
         if (temperature < min || temperature > max) {
             throw new IllegalArgumentException("Temperature must be within the range of min and max");
@@ -57,4 +57,4 @@ public class TaskB {
         this.temperature = temperature;
     }
 }
-}
+
