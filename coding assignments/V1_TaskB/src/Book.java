@@ -2,8 +2,8 @@
 public class Book extends Media {
     private String isbn;
 
-    public Book(String title, String creator, String isbn) {
-        super(title, creator);
+    public Book(String title, int year, float price, String isbn) {
+        super(title, year, price);
         this.isbn = isbn;
     }
 

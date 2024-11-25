@@ -2,8 +2,8 @@
 public class CD extends Media {
     private int tracks;
 
-    public CD(String title, String creator, int tracks) {
-        super(title, creator);
+    public CD(String title, int year, float price, int tracks) {
+        super(title, year, price);
         this.tracks = tracks;
     }
 

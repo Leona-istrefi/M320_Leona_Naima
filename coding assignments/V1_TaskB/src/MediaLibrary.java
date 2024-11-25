@@ -8,9 +8,9 @@ public class MediaLibrary {
 
     public static void main(String[] args) {
         // Prepopulate the library with some media items
-        mediaLibrary.add(new DVD("Inception", "Christopher Nolan", 148));
-        mediaLibrary.add(new CD("Abbey Road", "The Beatles", 17));
-        mediaLibrary.add(new Book("1984", "George Orwell", "978-0451524935"));
+        mediaLibrary.add(new DVD("Inception", 2014, 14.99f, 148));
+        mediaLibrary.add(new CD("Abbey Road", 2003, 17.5f, 4));
+        mediaLibrary.add(new Book("1984", 2000, 19.99f, "978-0451524935"));
 
         boolean running = true;
 
@@ -84,31 +84,38 @@ public class MediaLibrary {
             case 1 -> {
                 System.out.print("Enter title: ");
                 String title = scanner.nextLine();
-                System.out.print("Enter creator: ");
-                String creator = scanner.nextLine();
+                System.out.print("Enter year: ");
+                int year = Integer.parseInt(scanner.nextLine());
+                System.out.print("Enter price: ");
+                float price = Float.parseFloat(scanner.nextLine());
                 System.out.print("Enter runtime (in minutes): ");
                 int runtime = Integer.parseInt(scanner.nextLine());
-                mediaLibrary.add(new DVD(title, creator, runtime));
+                mediaLibrary.add(new DVD(title, year, price, runtime));
                 System.out.println("DVD added successfully!");
             }
+
             case 2 -> {
                 System.out.print("Enter title: ");
                 String title = scanner.nextLine();
-                System.out.print("Enter creator: ");
-                String creator = scanner.nextLine();
+                System.out.print("Enter year: ");
+                int year = Integer.parseInt(scanner.nextLine());
+                System.out.print("Enter price: ");
+                float price = Float.parseFloat(scanner.nextLine());
                 System.out.print("Enter number of tracks: ");
                 int tracks = Integer.parseInt(scanner.nextLine());
-                mediaLibrary.add(new CD(title, creator, tracks));
+                mediaLibrary.add(new CD(title, year, price, tracks));
                 System.out.println("CD added successfully!");
             }
             case 3 -> {
                 System.out.print("Enter title: ");
                 String title = scanner.nextLine();
-                System.out.print("Enter creator: ");
-                String creator = scanner.nextLine();
+                System.out.print("Enter year: ");
+                int year = Integer.parseInt(scanner.nextLine());
+                System.out.print("Enter price: ");
+                float price = Float.parseFloat(scanner.nextLine());
                 System.out.print("Enter ISBN: ");
                 String isbn = scanner.nextLine();
-                mediaLibrary.add(new Book(title, creator, isbn));
+                mediaLibrary.add(new Book(title, year, price, isbn));
                 System.out.println("Book added successfully!");
             }
             default -> System.out.println("Invalid option. No media added.");
