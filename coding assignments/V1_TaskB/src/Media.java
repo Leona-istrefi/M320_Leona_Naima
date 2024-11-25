@@ -28,4 +28,8 @@ public class Media {
         System.out.println("Price: " + price);
 
     }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
 }
