@@ -20,7 +20,8 @@ public class MediaLibrary {
             System.out.println("2. Search for a media item");
             System.out.println("3. Add a new media item");
             System.out.println("4. Remove a media item");
-            System.out.println("5. Exit");
+            System.out.println("5. Change the price of a media item");
+            System.out.println("6. Exit");
             System.out.print("Choose an option: ");
 
             int choice = Integer.parseInt(scanner.nextLine());
@@ -29,7 +30,8 @@ public class MediaLibrary {
                 case 2 -> searchMedia();
                 case 3 -> addMedia();
                 case 4 -> removeMedia();
-                case 5 -> {
+                case 5 -> changeMediaPrice();
+                case 6 -> {
                     running = false;
                     System.out.println("Exiting the Media Library. Goodbye!");
                 }
@@ -93,7 +95,6 @@ public class MediaLibrary {
                 mediaLibrary.add(new DVD(title, year, price, runtime));
                 System.out.println("DVD added successfully!");
             }
-
             case 2 -> {
                 System.out.print("Enter title: ");
                 String title = scanner.nextLine();
@@ -132,6 +133,33 @@ public class MediaLibrary {
             System.out.println("Media item removed successfully!");
         } else {
             System.out.println("Media item not found.");
+        }
+    }
+
+    // Method to change the price of a media item
+    private static void changeMediaPrice() {
+        if (mediaLibrary.isEmpty()) {
+            System.out.println("The library is empty. No prices can be updated.");
+            return;
+        }
+
+        System.out.println("Select a media item to change the price:");
+        for (int i = 0; i < mediaLibrary.size(); i++) {
+            System.out.println((i + 1) + ". " + mediaLibrary.get(i).getTitle());
+        }
+
+        System.out.print("Enter the number of the media item: ");
+        int index = Integer.parseInt(scanner.nextLine()) - 1;
+
+        if (index >= 0 && index < mediaLibrary.size()) {
+            Media selectedMedia = mediaLibrary.get(index);
+            System.out.println("Current price: " + selectedMedia.getPrice());
+            System.out.print("Enter the new price: ");
+            float newPrice = Float.parseFloat(scanner.nextLine());
+            selectedMedia.setPrice(newPrice);
+            System.out.println("Price updated successfully!");
+        } else {
+            System.out.println("Invalid selection. No changes made.");
         }
     }
 }
