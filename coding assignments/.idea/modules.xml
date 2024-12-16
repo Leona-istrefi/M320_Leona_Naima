@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/M1_TaskA/M1_TaskA.iml" filepath="$PROJECT_DIR$/M1_TaskA/M1_TaskA.iml" />
       <module fileurl="file://$PROJECT_DIR$/coding assignments.iml" filepath="$PROJECT_DIR$/coding assignments.iml" />
     </modules>
   </component>
