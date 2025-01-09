@@ -2,6 +2,9 @@ import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Main class to run the Flight Passenger Management System.
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -31,55 +34,71 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter flight number: ");
-                    String flightNumber = scanner.nextLine();
-                    Flight flight = schedule.findFlight(flightNumber);
-
-                    if (flight != null) {
-                        System.out.print("Enter passenger name: ");
-                        String passengerName = scanner.nextLine();
-
-                        String passportNumber;
-                        while (true) {
-                            System.out.print("Enter passport number (letters not allowed): ");
-                            passportNumber = scanner.nextLine();
-                            if (passportNumber.matches("^[A-Z0-9]+$")) {
-                                break;
-                            }
-                            System.out.println("Invalid input! Passport number must contain only letters and numbers. Try again.");
-                        }
-
-                        Passenger newPassenger = new Passenger(passengerName, passportNumber);
-                        flight.addPassenger(newPassenger);
-                    } else {
-                        System.out.println("Flight not found.");
-                    }
+                    registerPassenger(scanner, schedule);
                     break;
-
                 case 2:
-                    System.out.print("Enter flight number: ");
-                    String searchFlightNumber = scanner.nextLine();
-                    Flight searchFlight = schedule.findFlight(searchFlightNumber);
-
-                    if (searchFlight != null) {
-                        searchFlight.printPassengers();
-                    } else {
-                        System.out.println("Flight not found.");
-                    }
+                    printPassengersForFlight(scanner, schedule);
                     break;
-
                 case 3:
                     schedule.printAllFlights();
                     break;
-
                 case 4:
                     System.out.println("Exiting the system. Goodbye!");
                     scanner.close();
                     System.exit(0);
-
                 default:
                     System.out.println("Wrong input, try again.");
             }
+        }
+    }
+
+    /**
+     * Handles the registration of a passenger for a specific flight.
+     *
+     * @param scanner  the scanner object to read user input
+     * @param schedule the schedule containing all flights
+     */
+    private static void registerPassenger(Scanner scanner, Schedule schedule) {
+        System.out.print("Enter flight number: ");
+        String flightNumber = scanner.nextLine();
+        Flight flight = schedule.findFlight(flightNumber);
+
+        if (flight != null) {
+            System.out.print("Enter passenger name: ");
+            String passengerName = scanner.nextLine();
+
+            String passportNumber;
+            while (true) {
+                System.out.print("Enter passport number (letters not allowed): ");
+                passportNumber = scanner.nextLine();
+                if (passportNumber.matches("^[A-Z0-9]+$")) {
+                    break;
+                }
+                System.out.println("Invalid input! Passport number must contain only letters and numbers. Try again.");
+            }
+
+            Passenger newPassenger = new Passenger(passengerName, passportNumber);
+            flight.addPassenger(newPassenger);
+        } else {
+            System.out.println("Flight not found.");
+        }
+    }
+
+    /**
+     * Prints all passengers for a specified flight.
+     *
+     * @param scanner  the scanner object to read user input
+     * @param schedule the schedule containing all flights
+     */
+    private static void printPassengersForFlight(Scanner scanner, Schedule schedule) {
+        System.out.print("Enter flight number: ");
+        String searchFlightNumber = scanner.nextLine();
+        Flight searchFlight = schedule.findFlight(searchFlightNumber);
+
+        if (searchFlight != null) {
+            searchFlight.printPassengers();
+        } else {
+            System.out.println("Flight not found.");
         }
     }
 }
