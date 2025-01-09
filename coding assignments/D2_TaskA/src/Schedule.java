@@ -1,3 +1,4 @@
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Schedule {
@@ -6,7 +7,6 @@ public class Schedule {
     public Schedule() {
         this.flights = new ArrayList<>();
     }
-
 
     public ArrayList<Flight> getFlights() {
         return flights;
@@ -34,8 +34,10 @@ public class Schedule {
             System.out.println("No flights in the schedule.");
         } else {
             System.out.println("Scheduled Flights:");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
             for (Flight flight : flights) {
-                System.out.println("Flight Number: " + flight.getFlightNumber());
+                System.out.println("Flight Number: " + flight.getFlightNumber() +
+                        ", Time: " + flight.getDateTime().format(formatter));
             }
         }
     }

@@ -1,13 +1,15 @@
 import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Schedule schedule = new Schedule();
 
-
-        schedule.addFlight(new Flight("AB123"));
-        schedule.addFlight(new Flight("CD456"));
+        // Adding some flights with date and time
+        schedule.addFlight(new Flight("AB123", LocalDateTime.parse("2025-01-10T10:30")));
+        schedule.addFlight(new Flight("CD456", LocalDateTime.parse("2025-01-10T15:45")));
 
         System.out.println("Welcome to the Flight Passenger Management System!");
 
@@ -19,37 +21,42 @@ public class Main {
             System.out.println("4. Exit");
             System.out.print("Choose an option: ");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            int choice;
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Wrong input, try again.");
+                continue;
+            }
 
             switch (choice) {
                 case 1:
-
                     System.out.print("Enter flight number: ");
                     String flightNumber = scanner.nextLine();
                     Flight flight = schedule.findFlight(flightNumber);
 
                     if (flight != null) {
-                        String passengerName;
+                        System.out.print("Enter passenger name: ");
+                        String passengerName = scanner.nextLine();
+
+                        String passportNumber;
                         while (true) {
-                            System.out.print("Enter passenger name (letters only): ");
-                            passengerName = scanner.nextLine();
-                            if (passengerName.matches("^[a-zA-Z ]+$")) {
+                            System.out.print("Enter passport number (letters not allowed): ");
+                            passportNumber = scanner.nextLine();
+                            if (passportNumber.matches("^[A-Z0-9]+$")) {
                                 break;
                             }
-                            System.out.println("Invalid input! Name must contain only letters and spaces.");
+                            System.out.println("Invalid input! Passport number must contain only letters and numbers. Try again.");
                         }
 
-                        Passenger newPassenger = new Passenger(passengerName);
+                        Passenger newPassenger = new Passenger(passengerName, passportNumber);
                         flight.addPassenger(newPassenger);
-                        System.out.println("Passenger registered successfully!");
                     } else {
                         System.out.println("Flight not found.");
                     }
                     break;
 
                 case 2:
-
                     System.out.print("Enter flight number: ");
                     String searchFlightNumber = scanner.nextLine();
                     Flight searchFlight = schedule.findFlight(searchFlightNumber);
@@ -62,7 +69,6 @@ public class Main {
                     break;
 
                 case 3:
-
                     schedule.printAllFlights();
                     break;
 
@@ -72,7 +78,7 @@ public class Main {
                     System.exit(0);
 
                 default:
-                    System.out.println("Invalid option. Please try again.");
+                    System.out.println("Wrong input, try again.");
             }
         }
     }
