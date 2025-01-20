@@ -11,7 +11,7 @@ public class Main {
         Schedule schedule = new Schedule();
 
         // Adding some flights with date and time
-        schedule.addFlight(new Flight("AB123", LocalDateTime.parse("2025-01-10T10:30")));
+        schedule.addFlight(new Flight("AB123", LocalDateTime.parse("2025-01-10T10:30"))); // Main delagates  to Schedule. The Main class doesn’t manage flights itself. It uses the Schedule class to do it, meaning it says "Hey schedule, handle thsi flight Managemant for me"
         schedule.addFlight(new Flight("CD456", LocalDateTime.parse("2025-01-10T15:45")));
 
         System.out.println("Welcome to the Flight Passenger Management System!");
