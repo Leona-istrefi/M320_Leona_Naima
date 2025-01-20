@@ -22,7 +22,7 @@ public class Media {
         return price;
     }
 
-    public void displayDetails() {
+    public void displayDetails() { //The displayDetails() method in Media is overridden in each subclass (DVD, CD, and Book):
         System.out.println("Title: " + title);
         System.out.println("Year: " + year);
         System.out.println("Price: " + price);
