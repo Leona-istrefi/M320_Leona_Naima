@@ -51,7 +51,13 @@ Each vehicle will have its own specialized attribute, setting them apart from ea
 
 ### Exceptions
 To handle various scenarios, we will implement the following exceptions:
+<ls> 
+<ul> MinorAgeException – Raised if a person is under the required age. </ul>
+<ul>DenylistedPersonException – Raised if a person is on a denylist. </ul>
+<ul>LeaseLengthCollisionException – Raised if there’s a conflict with lease durations. </ul>
+</ls>
 
-MinorAgeException – Raised if a person is under the required age.
-DenylistedPersonException – Raised if a person is on a denylist.
-LeaseLengthCollisionException – Raised if there’s a conflict with lease durations.
+
+### Delegation 
+We will create a VehicleBehavior interface that various classes (e.g., LandVehicleBehavior, AirVehicleBehavior, WaterVehicleBehavior) implement. Each vehicle type (e.g., Car, Truck, Airplane, Boat) can delegate specialized behavior to these classes.
+Example: The Car class would delegate its highwayApproval behavior to a LandVehicleBehavior class, which handles the validation for all land vehicles.
