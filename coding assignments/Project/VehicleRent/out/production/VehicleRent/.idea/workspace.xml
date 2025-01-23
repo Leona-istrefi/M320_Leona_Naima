@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="44fcc052-beaf-4b09-b177-7a201b04ddb2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../Notes/OOP_VS_procedural.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Notes/OOP_VS_procedural.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Notes/UML_Classdiagram.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Notes/UML_Classdiagram.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Notes/class_objects.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Notes/class_objects.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D1_TaskB/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D1_TaskB/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D1_TaskB/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D1_TaskB/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D1_TaskB/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D1_TaskB/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D1_TaskB/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D1_TaskB/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D1_TaskB/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D1_TaskB/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D1_TaskB/D1_TaskB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D1_TaskB/D1_TaskB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D1_TaskB/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D1_TaskB/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D1_TaskB/src/TaskB.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D1_TaskB/src/TaskB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/D2_TaskA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/D2_TaskA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/src/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/src/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/src/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/src/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D2_TaskA/src/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D2_TaskA/src/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../D3/Description of Level 4 Project.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../D3/Description of Level 4 Project.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../M3/UML.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../M3/UML.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../D4/D4.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../D4/D4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../M3_Diagrams/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../M3_Diagrams/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../V4/V4.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../V4/V4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AirVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/AirVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Airplane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Airplane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bicycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bicycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Boat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElectroScooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ElectroScooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helicopter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Helicopter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LandVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/LandVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LandVehicleBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/LandVehicleBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Motorcycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sled.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submarine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Submarine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/Train.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VehicleBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/VehicleBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VehicleRentalManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/VehicleRentalManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WaterVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/WaterVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/denylistedPersonException.java" beforeDir="false" afterPath="$PROJECT_DIR$/denylistedPersonException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaseLengthCollisionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/leaseLengthCollisionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minorAgeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/minorAgeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Q3_TaskB/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Q3_TaskB/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Q3_TaskB/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Q3_TaskB/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Q3_TaskB/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Q3_TaskB/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Q3_TaskB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Q3_TaskB/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Q3_TaskB/Q3_TaskB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Q3_TaskB/Q3_TaskB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Q3_TaskB/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Q3_TaskB/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Q3_TaskB/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Q3_TaskB/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Q3_TaskB/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Q3_TaskB/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Q3_TaskB/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Q3_TaskB/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/V1_TaskB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/V1_TaskB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/src/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/src/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/src/CD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/src/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/src/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V1_TaskB/src/MediaLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V1_TaskB/src/MediaLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V2_TaskB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V2_TaskB/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V3A_Taskb/src/LondonStockExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V3A_Taskb/src/LondonStockExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V3A_Taskb/src/NewYorkStockExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V3A_Taskb/src/NewYorkStockExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V3A_Taskb/src/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V3A_Taskb/src/Portfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V3A_Taskb/src/StockExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V3A_Taskb/src/StockExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../V3A_Taskb/src/ZurichStockExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../V3A_Taskb/src/ZurichStockExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../coding assignments.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../coding assignments.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../notes/inheritance.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../notes/inheritance.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2s0B6pdHCBxdr7hWb2KxDvQfT2b" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/naica/Desktop/Dokumente/GitHub/M320_Leona_Naima/coding assignments/Project/VehicleRent",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="VehicleRent" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="VehicleRent" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44fcc052-beaf-4b09-b177-7a201b04ddb2" name="Changes" comment="" />
+      <created>1737582438565</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737582438565</updated>
+      <workItem from="1737582439816" duration="828000" />
+      <workItem from="1737660949192" duration="90000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
