@@ -1,17 +1,17 @@
 public class LandVehicle extends Vehicle {
-    private VehicleBehavior behavior;
+    private TerrestrialAndAerialBehavior behavior;
 
-    public LandVehicle(int year, int price, int speed, int ageApproval, int seats, String name, String color, String model, String brand, String highWayApproval) {
+    public LandVehicle(int year, int price, int speed, int ageApproval, int seats, String name, String color, String model, String brand, String terrainType) {
         super(year, price, speed, ageApproval, seats, name, color, model, brand);
         this.behavior = new LandVehicleBehavior();
-        this.behavior.setHighWayApproval(highWayApproval);
+        this.behavior.setTerrainType(terrainType);
     }
 
-    public String getHighWayApproval() {
-        return behavior.getHighWayApproval();
+    public String getTerrainType() {
+        return behavior.getTerrainType();
     }
 
-    public void setHighWayApproval(String highWayApproval) {
-        behavior.setHighWayApproval(highWayApproval);
+    public void setTerrainType(String terrainType) {
+        behavior.setTerrainType(terrainType);
     }
 }

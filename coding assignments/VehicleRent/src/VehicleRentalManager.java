@@ -21,15 +21,13 @@ public class VehicleRentalManager {
                 " ╚████╔╝ ███████╗██║  ██║██║╚██████╗███████╗███████╗    ██║  ██║███████╗██║ ╚████║   ██║   \n" +
                 "  ╚═══╝  ╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝╚══════╝╚══════╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝   \n" +
                 "                                                                                           \n");
-
-
     }
 
     public void addPersonToDenylist(Person person) {
         if (!denylist.contains(person)) {
             denylist.add(person);
         } else {
-            System.out.println(person.getName());
+            System.out.println(person.getName() + " is already on the deny list.");
         }
     }
 
@@ -66,8 +64,6 @@ public class VehicleRentalManager {
         return denylist;
     }
 
-
-
     public List<Contract> getContracts() {
         return contracts;
     }
@@ -80,5 +76,10 @@ public class VehicleRentalManager {
             }
         }
         return result;
+    }
+
+
+    public boolean isCustomerDenied(Person customer) {
+        return denylist.contains(customer);
     }
 }

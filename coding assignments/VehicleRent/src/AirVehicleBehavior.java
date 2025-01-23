@@ -1,5 +1,5 @@
-public class LandVehicleBehavior implements TerrestrialAndAerialBehavior {
-    private String terrainType;
+public class AirVehicleBehavior implements TerrestrialAndAerialBehavior {
+    private String terrainType; // Although not typical for air vehicles, it can denote takeoff/landing areas.
 
     @Override
     public String getTerrainType() {

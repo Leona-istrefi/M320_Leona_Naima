@@ -9,6 +9,20 @@ public class Vehicle {
     private String model;
     private String brand;
 
+    // Constructor
+    public Vehicle(int year, int price, int speed, int ageApproval, int seats, String name, String color, String model, String brand) {
+        this.year = year;
+        this.price = price;
+        this.speed = speed;
+        this.ageApproval = ageApproval;
+        this.seats = seats;
+        this.name = name;
+        this.color = color;
+        this.model = model;
+        this.brand = brand;
+    }
+
+    // Getters and Setters
     public int getYear() {
         return year;
     }
@@ -81,15 +95,9 @@ public class Vehicle {
         this.brand = brand;
     }
 
-    public Vehicle(int year, int price, int speed, int ageApproval, int seats, String name, String color, String model, String brand) {
-        this.year = year;
-        this.price = price;
-        this.speed = speed;
-        this.ageApproval = ageApproval;
-        this.seats = seats;
-        this.name = name;
-        this.color = color;
-        this.model = model;
-        this.brand = brand;
+
+    public String getVehicleInfo() {
+        return String.format("%s %s (%d) - %s, %s, Seats: %d, Price: $%d",
+                brand, model, year, color, name, seats, price);
     }
 }

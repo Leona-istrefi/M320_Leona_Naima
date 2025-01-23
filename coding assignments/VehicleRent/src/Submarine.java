@@ -1,4 +1,4 @@
-public class Submarine extends WaterVehicle{
+public class Submarine extends WaterVehicle {
     int maximumDepth;
     int windows;
 
@@ -24,5 +24,8 @@ public class Submarine extends WaterVehicle{
         this.windows = windows;
     }
 
-
+    @Override
+    public String getVehicleInfo() {
+        return super.getVehicleInfo() + " | Maximum Depth: " + maximumDepth + " meters | Windows: " + windows;
+    }
 }

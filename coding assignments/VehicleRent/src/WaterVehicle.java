@@ -1,4 +1,4 @@
-public class WaterVehicle extends Vehicle{
+public class WaterVehicle extends Vehicle {
     int chanceOfSinking;
 
     public int getChanceOfSinking() {
@@ -12,5 +12,10 @@ public class WaterVehicle extends Vehicle{
     public WaterVehicle(int year, int price, int speed, int ageApproval, int seats, String name, String color, String model, String brand, int chanceOfSinking) {
         super(year, price, speed, ageApproval, seats, name, color, model, brand);
         this.chanceOfSinking = chanceOfSinking;
+    }
+
+
+    public String getVehicleInfo() {
+        return "Water Vehicle: " + getName() + " (" + getModel() + ")";
     }
 }

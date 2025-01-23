@@ -1,6 +1,6 @@
-public class Boat extends WaterVehicle{
+public class Boat extends WaterVehicle {
     String fishingEquipment;
-    String Food;
+    String food;
 
     public String getFishingEquipment() {
         return fishingEquipment;
@@ -11,16 +11,21 @@ public class Boat extends WaterVehicle{
     }
 
     public String getFood() {
-        return Food;
+        return food;
     }
 
     public void setFood(String food) {
-        Food = food;
+        this.food = food;
     }
 
     public Boat(int year, int price, int speed, int ageApproval, int seats, String name, String color, String model, String brand, int chanceOfSinking, String fishingEquipment, String food) {
         super(year, price, speed, ageApproval, seats, name, color, model, brand, chanceOfSinking);
         this.fishingEquipment = fishingEquipment;
-        Food = food;
+        this.food = food;
+    }
+
+    @Override
+    public String getVehicleInfo() {
+        return super.getVehicleInfo() + " | Fishing Equipment: " + fishingEquipment + " | Food: " + food;
     }
 }
