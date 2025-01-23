@@ -24,3 +24,5 @@ Use Case:
 Marina, 25 wants to rent a bike for the coming weekend from 24/02/2025 - 25/02/2025. <br>
 Her birthday is on 29.10.2000 and she would prefer a blue bike. <br>
 She has no children and no other wishes. <br>
+
+![image](https://github.com/user-attachments/assets/022e6a2b-a6bd-474a-8d66-012930ff1ca8)
