@@ -1,4 +1,4 @@
-public class Rocket extends AirVehicle{
+public class Rocket extends AirVehicle {
     String flyingAbility;
 
     public String getFlyingAbility() {
@@ -9,10 +9,8 @@ public class Rocket extends AirVehicle{
         this.flyingAbility = flyingAbility;
     }
 
-    public Rocket(int year, int price, int speed, int ageApproval, int seats, String name, String color, String model, String brand, String driveSystem, String securitySystem, String navigationSystem, int seats1, String flyingAbility) {
-        super(year, price, speed, ageApproval, seats, name, color, model, brand, driveSystem, securitySystem, navigationSystem, seats1);
+    public Rocket(int year, int price, int speed, int ageApproval, int seats, String name, String color, String model, String brand, String driveSystem, String securitySystem, String navigationSystem, String flyingAbility) {
+        super(year, price, speed, ageApproval, seats, name, color, model, brand, driveSystem, securitySystem, navigationSystem, flyingAbility);
         this.flyingAbility = flyingAbility;
     }
-
-
 }
