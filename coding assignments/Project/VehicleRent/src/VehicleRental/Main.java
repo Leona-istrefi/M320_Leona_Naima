@@ -1,4 +1,4 @@
-import VehicleRental.*;
+package VehicleRental;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -10,16 +10,14 @@ import java.util.logging.Logger;
 public class Main {
     private static VehicleRentalManager manager = new VehicleRentalManager();
     private static Scanner scanner = new Scanner(System.in);
-
     private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
         initializeData();
-        Scanner scanner = new Scanner(System.in);
 
         while (true) {
             LOGGER.info("\nWhat would you like to do?");
-            LOGGER.info("1. Rent vehicleRental.Vehicle");
+            LOGGER.info("1. Rent vehicle");
             LOGGER.info("2. Show Denied List");
             LOGGER.info("3. Exit");
             String option = scanner.nextLine();
@@ -49,31 +47,33 @@ public class Main {
         final String BLACK = "black";
         final String GREEN = "green";
 
-
-        // Create vehicles using factories for water vehicles
         // Air Vehicles
-        Airplane airplane = new Airplane(1982, 200000, 100, 22, 176, "vehicleRental.Airplane", WHITE, "Fys-1", "Swiss", "Steering-Wheel", "Cameras", "Screen", "good", 250);
-        Helicopter helicopter = new Helicopter(2019, 30000, 90, 25, 4, "vehicleRental.Helicopter", WHITE, "3x-fje", "vehicleRental.Helicopter", "Steering Wheel", "no", "Navi", "good", 8);
-        Rocket rocket = new Rocket(2017, 40000, 394, 25, 2, "vehicleRental.Rocket", "Red", "Fast", "Nasa", "Steering Wheel", "Camera", "Navi", "Launch Pad");
+        Airplane airplane = new Airplane(1982, 200000, 100, 22, 176, "Airplane", WHITE, "Fys-1", "Swiss", "Steering-Wheel", "Cameras", "Screen", "good", 250);
+        Helicopter helicopter = new Helicopter(2019, 30000, 90, 25, 4, "Helicopter", WHITE, "3x-fje", "Helicopter", "Steering Wheel", "no", "Navi", "good", 8);
+
+        //Space Vehicles
+        Rocket rocket = new Rocket(2017, 40000, 394, 25, 2, "Rocket", "Red", "Fast", "Nasa", "High", "good");
+        SpaceShuttles spaceShuttles = new SpaceShuttles(1999, 20000,596, 25, 4, "Shuttle 45", "White", "Model 457", "NASA", "very high", 1);
+
 
         // Water Vehicles created through factories
-        WaterVehicleFactory boatFactory = new BoatFactory(2017, 1000000, 100, 18, 26, "vehicleRental.Boat", "Golden", "Yacht", "Wally", 30, "No fishing Equipment", "Pasta, Bread, Fruits");
-        WaterVehicleFactory submarineFactory = new SubmarineFactory(2020, 35000, 40, 21, 5, "vehicleRental.Submarine", "White", "Sub", "vehicleRental.Submarine", 100, 5000, 2);
+        WaterVehicleFactory boatFactory = new BoatFactory(2017, 1000000, 100, 18, 26, "Boat", "Golden", "Yacht", "Wally", 30, "No fishing Equipment", "Pasta, Bread, Fruits");
+        WaterVehicleFactory submarineFactory = new SubmarineFactory(2020, 35000, 40, 21, 5, "Submarine", "White", "Sub", "Submarine", 100, 5000, 2);
 
         Boat boat = (Boat) boatFactory.createWaterVehicle();
         Submarine submarine = (Submarine) submarineFactory.createWaterVehicle();
 
         // Land Vehicles
-        Bicycle bicycle = new Bicycle(2021, 89, 32, 10, 2, "vehicleRental.Bicycle", "Blue", "Sport", "Canyon", "no", "Road");
-        Bus bus = new Bus(2015, 30000, 75, 25, 50, "vehicleRental.Bus", BLACK, "052", "Mercedes", "no", 3, 3);
-        Car car = new Car(2023, 150000, 80, 18, 2, "vehicleRental.Car", GREEN, "394", "Porsche", "yes", 0, 1);
-        ElectroScooter electroScooter = new ElectroScooter(2023, 382, 45, 14, 0, "vehicleRental.ElectroScooter", BLACK, "234", "Ele", "no", 123, 3);
-        Motorcycle motorcycle = new Motorcycle(2019, 2000, 125, 16, 1, "vehicleRental.Motorcycle", BLACK, "J39he", "Yamaha", "yes", "Sport");
-        Sled sled = new Sled(2010, 10, 10, 3, 2, "vehicleRental.Sled", "Brown", "39-kl", "Ottos", "no", "Snow");
-        Tank tank = new Tank(2023, 300000, 70, 23, 5, "vehicleRental.Tank", GREEN, "HFRJ", "Military Swiss", "no", 5);
-        Tractor tractor = new Tractor(2019, 7000, 90, 18, 2, "vehicleRental.Tractor", GREEN, "Trac", "Trac", "no", 150);
-        Train train = new Train(2023, 40000, 80, 21, 300, "vehicleRental.Train", "Red", "K9E", "SBB", "no", 0, 5);
-        Truck truck = new Truck(2000, 7000, 90, 22, 2, "vehicleRental.Truck", "White", "8JP", "HDME", "yes", 3, 50, 6);
+        Bicycle bicycle = new Bicycle(2021, 89, 32, 10, 2, "Bicycle", "Blue", "Sport", "Canyon", "no", "Road");
+        Bus bus = new Bus(2015, 30000, 75, 25, 50, "Bus", BLACK, "052", "Mercedes", "no", 3, 3);
+        Car car = new Car(2023, 150000, 80, 18, 2, "Car", GREEN, "394", "Porsche", "yes", 0, 1);
+        ElectroScooter electroScooter = new ElectroScooter(2023, 382, 45, 14, 0, "ElectroScooter", BLACK, "234", "Ele", "no", 123, 3);
+        Motorcycle motorcycle = new Motorcycle(2019, 2000, 125, 16, 1, "Motorcycle", BLACK, "J39he", "Yamaha", "yes", "Sport");
+        Sled sled = new Sled(2010, 10, 10, 3, 2, "Sled", "Brown", "39-kl", "Ottos", "no", "Snow");
+        Tank tank = new Tank(2023, 300000, 70, 23, 5, "Tank", GREEN, "HFRJ", "Military Swiss", "no", 5);
+        Tractor tractor = new Tractor(2019, 7000, 90, 18, 2, "Tractor", GREEN, "Trac", "Trac", "no", 150);
+        Train train = new Train(2023, 40000, 80, 21, 300, "Train", "Red", "K9E", "SBB", "no", 0, 5);
+        Truck truck = new Truck(2000, 7000, 90, 22, 2, "Truck", "White", "8JP", "HDME", "yes", 3, 50, 6);
 
         // Add Vehicles to Manager
         manager.addVehicle(airplane);
@@ -91,6 +91,7 @@ public class Main {
         manager.addVehicle(tractor);
         manager.addVehicle(train);
         manager.addVehicle(truck);
+        manager.addVehicle(spaceShuttles);
 
         // Adding Customers
         LocalDate leonaistrefiBirthDate = LocalDate.of(2005, 3, 1);
@@ -123,7 +124,6 @@ public class Main {
 
     private static void rentVehicle() {
         Person customer = getCustomerDetails();
-
         if (customer == null || manager.isCustomerDenied(customer)) {
             LOGGER.info("Access Denied. You are on the deny list.");
             return;
@@ -168,9 +168,9 @@ public class Main {
 
     private static List<? extends Vehicle> getAvailableVehicles() {
         LOGGER.info("\nSelect vehicle type to rent:");
-        LOGGER.info("1. Land vehicleRental.Vehicle");
-        LOGGER.info("2. Water vehicleRental.Vehicle");
-        LOGGER.info("3. Air vehicleRental.Vehicle");
+        LOGGER.info("1. Land Vehicle");
+        LOGGER.info("2. Water Vehicle");
+        LOGGER.info("3. Air Vehicle");
         String vehicleTypeOption = scanner.nextLine();
 
         switch (vehicleTypeOption) {
@@ -238,7 +238,7 @@ public class Main {
             }
 
             manager.createContract(customer, selectedVehicle, startDate, endDate, "Standard terms");
-            LOGGER.info("\nvehicleRental.Contract created successfully!");
+            LOGGER.info("\nContract created successfully!");
         } catch (LeaseLengthCollisionException e) {
             LOGGER.info(e.getMessage());
             askRetry();
