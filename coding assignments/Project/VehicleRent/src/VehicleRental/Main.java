@@ -19,10 +19,11 @@ public class Main {
             LOGGER.info("\nWhat would you like to do?");
             LOGGER.info("1. Rent vehicle");
             LOGGER.info("2. Show Denied List");
-            LOGGER.info("3. Exit");
+            LOGGER.info("3. Add Person to Denied List");
+            LOGGER.info("4. Exit");
             String option = scanner.nextLine();
 
-            if ("3".equals(option)) {
+            if ("4".equals(option)) {
                 LOGGER.info("You left the Garage");
                 break;  // Explicit end condition
             }
@@ -33,6 +34,9 @@ public class Main {
                     break;
                 case "2":
                     showDeniedList();
+                    break;
+                case "3":
+                    addPersonToDenylist();
                     break;
                 default:
                     LOGGER.info("Invalid option. Please try again.");
@@ -51,10 +55,9 @@ public class Main {
         Airplane airplane = new Airplane(1982, 200000, 100, 22, 176, "Airplane", WHITE, "Fys-1", "Swiss", "Steering-Wheel", "Cameras", "Screen", "good", 250);
         Helicopter helicopter = new Helicopter(2019, 30000, 90, 25, 4, "Helicopter", WHITE, "3x-fje", "Helicopter", "Steering Wheel", "no", "Navi", "good", 8);
 
-        //Space Vehicles
+        // Space Vehicles
         Rocket rocket = new Rocket(2017, 40000, 394, 25, 2, "Rocket", "Red", "Fast", "Nasa", "High", "good");
-        SpaceShuttles spaceShuttles = new SpaceShuttles(1999, 20000,596, 25, 4, "Shuttle 45", "White", "Model 457", "NASA", "very high", 1);
-
+        SpaceShuttles spaceShuttles = new SpaceShuttles(1999, 20000, 596, 25, 4, "Shuttle 45", "White", "Model 457", "NASA", "very high", 1);
 
         // Water Vehicles created through factories
         WaterVehicleFactory boatFactory = new BoatFactory(2017, 1000000, 100, 18, 26, "Boat", "Golden", "Yacht", "Wally", 30, "No fishing Equipment", "Pasta, Bread, Fruits");
@@ -253,5 +256,21 @@ public class Main {
     private static boolean rentVehicleRetry() {
         rentVehicle();
         return false;
+    }
+
+    private static void addPersonToDenylist() {
+        LOGGER.info("\nEnter full name of the person to deny: ");
+        String fullName = scanner.nextLine();
+
+        LOGGER.info("Enter birth date (yyyy-MM-dd): ");
+        LocalDate birthDate = parseDate(scanner.nextLine());
+        if (birthDate == null) return;
+
+        LOGGER.info("Enter phone number: ");
+        int phoneNumber = Integer.parseInt(scanner.nextLine());
+
+        Person personToDeny = new Person(fullName, birthDate, phoneNumber);
+        manager.addPersonToDenylist(personToDeny);
+        LOGGER.info(fullName + " has been added to the deny list.");
     }
 }
