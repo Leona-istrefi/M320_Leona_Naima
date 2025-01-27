@@ -26,3 +26,10 @@ Her birthday is on 29.10.2000 and she would prefer a blue bike. <br>
 She has no children and no other wishes. <br>
 
 ![image](https://github.com/user-attachments/assets/022e6a2b-a6bd-474a-8d66-012930ff1ca8)
+
+
+# Lines of code
+
+<p> We have 1555 lines of Code</p>
+
+![image](https://github.com/user-attachments/assets/24a893a7-f0cc-4df8-aa2e-0e28fb93da72)
