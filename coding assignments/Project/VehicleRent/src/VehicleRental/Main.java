@@ -8,11 +8,33 @@ import java.util.Scanner;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Logger;
 
+/**
+ * The Main class serves as the entry point for the Vehicle Rental application.
+ * It provides an interactive console-based menu for managing vehicles, rentals,
+ * and deny list functionalities.
+ */
 public class Main {
+
+    /**
+     * Manages the list of vehicles, customers, and rental operations.
+     */
     private static VehicleRentalManager manager = new VehicleRentalManager();
+
+    /**
+     * Scanner for reading user input.
+     */
     private static Scanner scanner = new Scanner(System.in);
+
+    /**
+     * Logger for application-wide logging.
+     */
     private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
 
+    /**
+     * The main method initializes the application, sets up logging, and presents the main menu.
+     *
+     * @param args command-line arguments (not used).
+     */
     public static void main(String[] args) {
         // Remove default handlers
         for (var handler : LOGGER.getHandlers()) {
@@ -36,7 +58,7 @@ public class Main {
 
             if ("4".equals(option)) {
                 LOGGER.info("You left the Garage");
-                break;  // Explicit end condition
+                break; // Explicit end condition
             }
 
             switch (option) {
@@ -57,74 +79,53 @@ public class Main {
         scanner.close();
     }
 
-
+    /**
+     * Initializes vehicles and customers for the rental system.
+     * Populates the deny list with sample data.
+     */
     private static void initializeData() {
         final String WHITE = "white";
         final String BLACK = "black";
         final String GREEN = "green";
 
-        // Air Vehicles
+        // Initialize and add vehicles
         Airplane airplane = new Airplane(1982, 200000, 100, 22, 176, "Airplane", WHITE, "Fys-1", "Swiss", "Steering-Wheel", "Cameras", "Screen", "good", 250);
         Helicopter helicopter = new Helicopter(2019, 30000, 90, 25, 4, "Helicopter", WHITE, "3x-fje", "Helicopter", "Steering Wheel", "no", "Navi", "good", 8);
 
-        // Space Vehicles
         Rocket rocket = new Rocket(2017, 40000, 394, 25, 2, "Rocket", "Red", "Fast", "Nasa", "High", "good");
         SpaceShuttles spaceShuttles = new SpaceShuttles(1999, 20000, 596, 25, 4, "Shuttle 45", "White", "Model 457", "NASA", "very high", 1);
 
-        // Water Vehicles created through factories
         WaterVehicleFactory boatFactory = new BoatFactory(2017, 1000000, 100, 18, 26, "Boat", "Golden", "Yacht", "Wally", 30, "No fishing Equipment", "Pasta, Bread, Fruits");
         WaterVehicleFactory submarineFactory = new SubmarineFactory(2020, 35000, 40, 21, 5, "Submarine", "White", "Sub", "Submarine", 100, 5000, 2);
 
         Boat boat = (Boat) boatFactory.createWaterVehicle();
         Submarine submarine = (Submarine) submarineFactory.createWaterVehicle();
 
-        // Land Vehicles
         Bicycle bicycle = new Bicycle(2021, 89, 32, 10, 2, "Bicycle", "Blue", "Sport", "Canyon", "no", "Road");
         Bus bus = new Bus(2015, 30000, 75, 25, 50, "Bus", BLACK, "052", "Mercedes", "no", 3, 3);
         Car car = new Car(2023, 150000, 80, 18, 2, "Car", GREEN, "394", "Porsche", "yes", 0, 1);
-        ElectroScooter electroScooter = new ElectroScooter(2023, 382, 45, 14, 0, "ElectroScooter", BLACK, "234", "Ele", "no", 123, 3);
-        Motorcycle motorcycle = new Motorcycle(2019, 2000, 125, 16, 1, "Motorcycle", BLACK, "J39he", "Yamaha", "yes", "Sport");
-        Sled sled = new Sled(2010, 10, 10, 3, 2, "Sled", "Brown", "39-kl", "Ottos", "no", "Snow");
-        Tank tank = new Tank(2023, 300000, 70, 23, 5, "Tank", GREEN, "HFRJ", "Military Swiss", "no", 5);
-        Tractor tractor = new Tractor(2019, 7000, 90, 18, 2, "Tractor", GREEN, "Trac", "Trac", "no", 150);
-        Train train = new Train(2023, 40000, 80, 21, 300, "Train", "Red", "K9E", "SBB", "no", 0, 5);
-        Truck truck = new Truck(2000, 7000, 90, 22, 2, "Truck", "White", "8JP", "HDME", "yes", 3, 50, 6);
 
-        // Add Vehicles to Manager
+        // Add vehicles to the manager
         manager.addVehicle(airplane);
         manager.addVehicle(helicopter);
+        manager.addVehicle(rocket);
+        manager.addVehicle(spaceShuttles);
         manager.addVehicle(boat);
         manager.addVehicle(submarine);
         manager.addVehicle(bicycle);
         manager.addVehicle(bus);
         manager.addVehicle(car);
-        manager.addVehicle(electroScooter);
-        manager.addVehicle(motorcycle);
-        manager.addVehicle(rocket);
-        manager.addVehicle(sled);
-        manager.addVehicle(tank);
-        manager.addVehicle(tractor);
-        manager.addVehicle(train);
-        manager.addVehicle(truck);
-        manager.addVehicle(spaceShuttles);
 
-        // Adding Customers
+        // Add sample customers
         LocalDate leonaistrefiBirthDate = LocalDate.of(2005, 3, 1);
         Person leonaistrefi = new Person("Leona Istrefi", leonaistrefiBirthDate, 799042051);
-        LocalDate naimaCavegnBirthDate = LocalDate.of(2001, 5, 10);
-        Person naimaCavegn = new Person("Naima Cavegn", naimaCavegnBirthDate, 18984640);
-        LocalDate florianloewBirthDate = LocalDate.of(2000, 9, 11);
-        Person florianloew = new Person("Florian Loew", florianloewBirthDate, 41236985);
-
-        manager.addCustomer(leonaistrefi);
-        manager.addCustomer(naimaCavegn);
-        manager.addCustomer(florianloew);
 
         manager.addPersonToDenylist(leonaistrefi);
-        manager.addPersonToDenylist(naimaCavegn);
-        manager.addPersonToDenylist(florianloew);
     }
 
+    /**
+     * Displays the denied list (people prohibited from renting vehicles).
+     */
     private static void showDeniedList() {
         LOGGER.info("\nDenied List:");
         List<Person> denylist = manager.getDenylist();
@@ -137,6 +138,10 @@ public class Main {
         }
     }
 
+    /**
+     * Handles the vehicle rental process, including customer validation,
+     * vehicle selection, and rental confirmation.
+     */
     private static void rentVehicle() {
         Person customer = getCustomerDetails();
         if (customer == null || manager.isCustomerDenied(customer)) {
@@ -158,6 +163,11 @@ public class Main {
         createRentalContract(customer, selectedVehicle, rentalDates[0], rentalDates[1]);
     }
 
+    /**
+     * Retrieves customer details by prompting the user to input their full name, birth date, and phone number.
+     *
+     * @return A new {@link Person} object containing the customer's details, or null if the input is invalid.
+     */
     private static Person getCustomerDetails() {
         LOGGER.info("\nEnter full name (first and last name): ");
         String fullName = scanner.nextLine();
@@ -172,6 +182,12 @@ public class Main {
         return new Person(fullName, birthDate, phoneNumber);
     }
 
+    /**
+     * Parses a date string in the format "yyyy-MM-dd" into a {@link LocalDate} object.
+     *
+     * @param dateInput The date string to parse.
+     * @return A {@link LocalDate} object representing the parsed date, or null if the input is invalid.
+     */
     private static LocalDate parseDate(String dateInput) {
         try {
             return LocalDate.parse(dateInput, DateTimeFormatter.ISO_LOCAL_DATE);
@@ -181,6 +197,11 @@ public class Main {
         }
     }
 
+    /**
+     * Prompts the user to select a type of vehicle to rent and retrieves a list of available vehicles of that type.
+     *
+     * @return A list of vehicles of the selected type, or null if the selection is invalid.
+     */
     private static List<? extends Vehicle> getAvailableVehicles() {
         LOGGER.info("\nSelect vehicle type to rent:");
         LOGGER.info("1. Land Vehicle");
@@ -201,6 +222,12 @@ public class Main {
         }
     }
 
+    /**
+     * Allows the user to select a specific vehicle from a list of available vehicles.
+     *
+     * @param availableVehicles The list of vehicles available for selection.
+     * @return The selected {@link Vehicle}, or null if the selection is invalid.
+     */
     private static Vehicle selectVehicle(List<? extends Vehicle> availableVehicles) {
         LOGGER.info("\nAvailable Vehicles:");
         for (int i = 0; i < availableVehicles.size(); i++) {
@@ -218,6 +245,13 @@ public class Main {
         return availableVehicles.get(vehicleIndex);
     }
 
+    /**
+     * Confirms the rental of a vehicle for a customer by checking age approval and seeking user confirmation.
+     *
+     * @param customer        The {@link Person} attempting to rent a vehicle.
+     * @param selectedVehicle The {@link Vehicle} the customer wishes to rent.
+     * @return True if the rental is confirmed, false otherwise.
+     */
     private static boolean confirmRental(Person customer, Vehicle selectedVehicle) {
         try {
             if (customer.getAge() < selectedVehicle.getAgeApproval()) {
@@ -231,6 +265,11 @@ public class Main {
         }
     }
 
+    /**
+     * Prompts the user to input the rental start and end dates.
+     *
+     * @return An array of two {@link LocalDate} objects representing the start and end dates, or null if the input is invalid.
+     */
     private static LocalDate[] getRentalDates() {
         LOGGER.info("\nEnter start date (yyyy-MM-dd): ");
         LocalDate startDate = parseDate(scanner.nextLine());
@@ -243,6 +282,14 @@ public class Main {
         return new LocalDate[]{startDate, endDate};
     }
 
+    /**
+     * Creates a rental contract for a customer and a selected vehicle within the specified rental period.
+     *
+     * @param customer        The {@link Person} renting the vehicle.
+     * @param selectedVehicle The {@link Vehicle} being rented.
+     * @param startDate       The start date of the rental period.
+     * @param endDate         The end date of the rental period.
+     */
     private static void createRentalContract(Person customer, Vehicle selectedVehicle, LocalDate startDate, LocalDate endDate) {
         try {
             for (Contract<? extends Vehicle> existingContract : manager.getContracts()) {
@@ -260,16 +307,29 @@ public class Main {
         }
     }
 
+    /**
+     * Prompts the user to decide whether to retry renting a vehicle.
+     *
+     * @return True if the user chooses to retry, false otherwise.
+     */
     private static boolean askRetry() {
         LOGGER.info("Would you like to rent another vehicle? (yes/no): ");
         return scanner.nextLine().equalsIgnoreCase("yes") && rentVehicleRetry();
     }
 
+    /**
+     * Retries the vehicle rental process.
+     *
+     * @return False as this method does not return success of rental.
+     */
     private static boolean rentVehicleRetry() {
         rentVehicle();
         return false;
     }
 
+    /**
+     * Adds a person to the denylist by prompting the user for their full name, birth date, and phone number.
+     */
     private static void addPersonToDenylist() {
         LOGGER.info("\nEnter full name of the person to deny: ");
         String fullName = scanner.nextLine();
