@@ -1,13 +1,15 @@
 package VehicleRental;
 
 public class SpaceVehicleBehavior implements VehicleBehavior {
-    private String AirPressure;
+    private String airPressure;
+
     @Override
     public String getAirPressure() {
-        return AirPressure;
+        return airPressure;
     }
+
     @Override
-    public void setAirPressure(String AirPressure) {
-        this.AirPressure = AirPressure;
+    public void setAirPressure(String airPressure) {
+        this.airPressure = airPressure;
     }
 }
