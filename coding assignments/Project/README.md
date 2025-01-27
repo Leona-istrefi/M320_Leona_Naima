@@ -27,6 +27,15 @@ She has no children and no other wishes. <br>
 
 ![image](https://github.com/user-attachments/assets/022e6a2b-a6bd-474a-8d66-012930ff1ca8)
 
+# Delegation
+SpaceVehicle class represents a generic space vehicle, inheriting from the Vehicle class while delegating some of its behavior to the VehicleBehavior interface.
+Instead of directly handling air pressure management, SpaceVehicle delegates this responsibility to an instance of SpaceVehicleBehavior, which implements VehicleBehavior.
+The constructor of SpaceVehicle initializes an instance of SpaceVehicleBehavior and assigns it to the behavior field.
+When calling getAirPressure() or setAirPressure(), SpaceVehicle simply forwards the request to behavior, ensuring that it does not manage air pressure directly.
+This delegation allows SpaceVehicle to remain focused on its core attributes like year, price, speed, and seating capacity, while offloading behavior-specific responsibilities.
+The SpaceShuttles class extends SpaceVehicle, adding a walkieTalkie property, making it a specialized type of space vehicle.
+Since SpaceShuttles inherits from SpaceVehicle, it automatically gains access to the delegation pattern for air pressure management.
+TheVehicleBehavior interface ensures that different vehicle behaviors can be implemented and assigned dynamically to SpaceVehicle.
 
 # Lines of code
 
