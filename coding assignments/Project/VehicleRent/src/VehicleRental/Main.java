@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.ConsoleHandler;
 import java.util.logging.Logger;
 
 public class Main {
@@ -13,6 +14,16 @@ public class Main {
     private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
+        // Remove default handlers
+        for (var handler : LOGGER.getHandlers()) {
+            LOGGER.removeHandler(handler);
+        }
+
+        // Set up the custom formatter
+        ConsoleHandler consoleHandler = new ConsoleHandler();
+        consoleHandler.setFormatter(new SimpleFormatter());
+        LOGGER.addHandler(consoleHandler);
+
         initializeData();
 
         while (true) {
@@ -45,6 +56,7 @@ public class Main {
 
         scanner.close();
     }
+
 
     private static void initializeData() {
         final String WHITE = "white";
